@@ -3,9 +3,55 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding: 1.5rem 0;
+  font-size: 1rem;
 
+  &__logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+    a:link,
+    a:visited {
+      color: #003249;
+    }
+  }
   &__nav {
     display: flex;
-    
+    align-items: center;
+    gap: 2rem;
+  }
+
+  div:hover {
+    cursor: pointer;
+  }
+}
+
+.category {
+  background-color: #fcfcfc;
+  border: 1px solid #f6f1fe;
+  padding: 1rem 0;
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+
+    .list__item {
+      a:link,
+      a:visited {
+        padding: 1rem 0;
+        font-weight: 500;
+        color: #003249;
+      }
+      a:hover,
+      a:active {
+        color: #69306D;
+      }
+      .active {
+        border-bottom: 2px solid  #69306D;
+      }
+    }
   }
 }
