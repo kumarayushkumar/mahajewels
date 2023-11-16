@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom"
 
 export default function Product() {
-  const params = useParams<{category: string}>();
+  const params = useParams<{ category: string }>()
   const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (e.target && (e.target as HTMLElement).closest('.product__card')) {
       const id = (e.target as HTMLElement).closest('.product__card')?.id

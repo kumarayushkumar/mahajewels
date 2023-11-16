@@ -1,7 +1,8 @@
-import { PreviewGallery } from "../components/previewGallery";
-import {PropertyTable} from "../components/propertyTable";
-import {IProduct} from "../interface";
-export default function ProductDescription({product}: {product: IProduct}) {
+import { PreviewGallery } from "../components/previewGallery"
+import { PropertyTable } from "../components/propertyTable"
+import { IProduct } from "../interface"
+
+export default function ProductDescription({ product }: { product: IProduct }) {
   return (
     <div>
       <div className="productDescription__container">

@@ -1,5 +1,5 @@
 import { useEffect } from "react"
-import { Outlet, Navigate, useNavigate } from "react-router-dom"
+import { Outlet, useNavigate } from "react-router-dom"
 
 import { auth, onAuthStateChanged } from "../../firebase/auth"
 
