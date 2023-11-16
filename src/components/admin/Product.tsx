@@ -17,7 +17,7 @@ export default function Product() {
       <Link to=".." relative="path" className="">&larr; Back</Link>
       <div className="row">
         <div className="col-3">
-          <img src={product.img} alt="" />
+          <img src={product.img[0]} alt="" />
         </div>
         <div className="col-9">
 

@@ -15,7 +15,7 @@ export default function Admin() {
 
   return (
     <section id="admin">
-      <h1>hello</h1>
+      <Outlet />
     </section>
   )
 }

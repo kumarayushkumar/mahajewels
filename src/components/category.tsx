@@ -1,5 +1,5 @@
 import { ProductCategory } from "../interface"
-import { CategoryItem } from "./categoryItem"
+import { CategoryItem } from "./CategoryItem"
 
 export default function Category() {
   return (
