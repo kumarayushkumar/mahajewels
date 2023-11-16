@@ -13,13 +13,17 @@ import Setting from "./components/admin/Setting"
 import Protected from "./components/admin/Protected"
 import Login from "./pages/admin/Login"
 import Admin from "./pages/admin/Admin"
+import Layout from "./components/Layout"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/">
-      <Route index element={<Home />} />
-      <Route path="gold" element={<h1>gold</h1>} />
-      <Route path="order" element={<h1>order</h1>} />
+      <Route element={<Layout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/category/:category" element={<Product />}>
+          {/* <Route path="/:sku" element={<ProductDescription />} /> */}
+        </Route>
+      </Route>
 
       <Route path="login" element={<Login />} />
 

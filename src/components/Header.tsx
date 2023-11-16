@@ -4,7 +4,7 @@ import { ProductCategory } from '../interface'
 export default function Header() {
   return (
     <>
-      <header className='header'>
+      <header className='header container'>
         <div className="header__logo" >
           <p>MahaJewels</p>
         </div>
