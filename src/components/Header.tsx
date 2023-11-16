@@ -4,11 +4,11 @@ import { ProductCategory } from '../interface'
 export default function Header() {
   return (
     <>
-      <header>
-        <div className="logo" >
+      <header className='header'>
+        <div className="header__logo" >
           <p>MahaJewels</p>
         </div>
-        <nav className="icons">
+        <nav className="header__nav">
           <div className="icons__search">
             <svg
               xmlns="http://www.w3.org/2000/svg"

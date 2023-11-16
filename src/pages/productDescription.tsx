@@ -1,5 +1,5 @@
-import { PreviewGallery } from "../components/previewGallery"
-import { PropertyTable } from "../components/propertyTable"
+import { PreviewGallery } from "../components/PreviewGallery"
+import { PropertyTable } from "../components/PropertyTable"
 import { IProduct } from "../interface"
 
 export default function ProductDescription({ product }: { product: IProduct }) {
