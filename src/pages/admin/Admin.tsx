@@ -5,7 +5,7 @@ import { auth, onAuthStateChanged } from "../../firebase/auth"
 
 export default function Admin() {
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
+    const unsubscribe = onAuthStateChanged(auth, user => {
       if (!user) {
         return <Navigate to="/login" />
       }

@@ -20,7 +20,5 @@ export default function Error() {
     return () => clearTimeout(redirectTimeout)
   }, [])
 
-  return (
-    <NotFound />
-  )
+  return <NotFound />
 }
