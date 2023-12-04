@@ -1,6 +1,6 @@
-import { PreviewGallery } from "../components/PreviewGallery"
-import { PropertyTable } from "../components/PropertyTable"
-import { IProduct } from "../interface"
+import { PreviewGallery } from '../components/PreviewGallery'
+import { PropertyTable } from '../components/PropertyTable'
+import { IProduct } from '../interface'
 
 export default function ProductDescription({ product }: { product: IProduct }) {
   return (
@@ -28,7 +28,9 @@ export default function ProductDescription({ product }: { product: IProduct }) {
               <button className="button__quantity--increment">+</button>
             </div>
             <div className="button__addtocart">
-              <button className="button__addtocart--primary">Add To Cart</button>
+              <button className="button__addtocart--primary">
+                Add To Cart
+              </button>
             </div>
           </div>
         </div>

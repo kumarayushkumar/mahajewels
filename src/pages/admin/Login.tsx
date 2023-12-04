@@ -1,8 +1,8 @@
-import { useState, ChangeEvent, FormEvent, useEffect } from "react"
-import { useNavigate } from "react-router-dom"
-import { ToastContainer, toast } from "react-toastify"
+import { useState, ChangeEvent, FormEvent, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { ToastContainer, toast } from 'react-toastify'
 
-import { auth, login, onAuthStateChanged } from "../../firebase/auth"
+import { auth, login, onAuthStateChanged } from '../../firebase/auth'
 
 interface FormData {
   email: string
@@ -16,16 +16,16 @@ interface Errors {
 
 export default function Login() {
   const [formData, setFormData] = useState<FormData>({
-    email: "",
-    password: ""
+    email: '',
+    password: ''
   })
-  const [errors, setErrors] = useState<Errors>({ email: "", password: "" })
+  const [errors, setErrors] = useState<Errors>({ email: '', password: '' })
   const navigate = useNavigate()
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, user => {
       if (user) {
-        navigate("/admin")
+        navigate('/admin')
       }
     })
     return () => unsubscribe()
@@ -42,7 +42,7 @@ export default function Login() {
     if (!formData.email || !/^\S+@\S+\.\S+$/.test(formData.email)) {
       setErrors(prevErrors => ({
         ...prevErrors,
-        email: "Invalid email address"
+        email: 'Invalid email address'
       }))
       return
     }
@@ -50,7 +50,7 @@ export default function Login() {
     if (!formData.password || formData.password.length < 8) {
       setErrors(prevErrors => ({
         ...prevErrors,
-        password: "Password must be at least 8 characters"
+        password: 'Password must be at least 8 characters'
       }))
       return
     }
@@ -59,14 +59,14 @@ export default function Login() {
       .then(user => {
         console.log(`login page` + user)
         toast.success(`Welcome back`)
-        navigate("/admin")
+        navigate('/admin')
       })
       .catch(err => {
         toast.error(err.message)
       })
 
-    setFormData({ email: "", password: "" })
-    setErrors({ email: "", password: "" })
+    setFormData({ email: '', password: '' })
+    setErrors({ email: '', password: '' })
   }
 
   return (

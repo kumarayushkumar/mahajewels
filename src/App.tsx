@@ -3,23 +3,23 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
   RouterProvider
-} from "react-router-dom"
+} from 'react-router-dom'
 
-import Home from "./pages/Home"
-import Error from "./pages/Error"
-import AllProducts from "./components/admin/AllProducts"
-import Product from "./components/admin/Product"
-import Setting from "./components/admin/Setting"
-import Protected from "./components/admin/Protected"
-import Login from "./pages/admin/Login"
-import Admin from "./pages/admin/Admin"
-import Layout from "./components/Layout"
+import Home from './pages/Home'
+import Error from './pages/Error'
+import AllProducts from './components/admin/AllProducts'
+import Product from './components/admin/Product'
+import Setting from './components/admin/Setting'
+import Protected from './components/admin/Protected'
+import Login from './pages/admin/Login'
+import Admin from './pages/admin/Admin'
+import Layout from './components/Layout'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/">
       <Route element={<Layout />}>
-        <Route path="/" element={<Home />} />
+        <Route index element={<Home />} />
         <Route path="/category/:category" element={<Product />}>
           {/* <Route path="/:sku" element={<ProductDescription />} /> */}
         </Route>
@@ -28,7 +28,7 @@ const router = createBrowserRouter(
       <Route path="login" element={<Login />} />
 
       <Route path="admin" element={<Protected />}>
-        <Route path="." element={<Admin />}>
+        <Route element={<Admin />}>
           <Route path="products">
             <Route index element={<AllProducts />} />
             <Route path=":sku" element={<Product />} />

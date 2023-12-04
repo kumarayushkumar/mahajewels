@@ -1,9 +1,12 @@
 type CategoryItemProps = {
-  name: string;
-  image: string;
+  name: string
+  image: string
 }
 
-export const CategoryItem = ({ name, image }: CategoryItemProps): JSX.Element => {
+export const CategoryItem = ({
+  name,
+  image
+}: CategoryItemProps): JSX.Element => {
   return (
     <div>
       <div className="category__item">
@@ -11,9 +14,7 @@ export const CategoryItem = ({ name, image }: CategoryItemProps): JSX.Element =>
           <img src={image} alt="category" />
         </div>
         <div className="category__item--name">
-          <h3 className="heading__tertiary">
-            {name}
-          </h3>
+          <h3 className="heading__tertiary">{name}</h3>
         </div>
       </div>
     </div>

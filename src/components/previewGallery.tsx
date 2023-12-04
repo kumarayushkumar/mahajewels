@@ -10,11 +10,9 @@ export const PreviewGallery: React.FC<PreviewGalleryProps> = ({ images }) => {
     <div>
       {/* make it grid */}
       <div>
-        {
-        images.map((image: string, index: number) => (
-          <img src={image} alt="" key={index}/>
-        ))
-        }
+        {images.map((image: string, index: number) => (
+          <img src={image} alt="" key={index} />
+        ))}
       </div>
     </div>
   )

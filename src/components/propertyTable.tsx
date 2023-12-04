@@ -1,5 +1,5 @@
-import React from 'react';
-import { IProduct } from "../interface";
+import React from 'react'
+import { IProduct } from '../interface'
 
 interface PropertyTableProps {
   product: IProduct

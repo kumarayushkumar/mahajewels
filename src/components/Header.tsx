@@ -1,6 +1,6 @@
 // import cart from "../assets/svgs/cart.svg";
-import { Link, NavLink } from "react-router-dom"
-import { ProductCategory } from "../interface"
+import { Link, NavLink } from 'react-router-dom'
+import { ProductCategory } from '../interface'
 export default function Header() {
   return (
     <>

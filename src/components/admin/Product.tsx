@@ -1,8 +1,8 @@
-import { useState } from "react"
-import { Link, useParams } from "react-router-dom"
+import { useState } from 'react'
+import { Link, useParams } from 'react-router-dom'
 
-import Loading from "../Loading"
-import { IProduct } from "../../interface"
+import Loading from '../Loading'
+import { IProduct } from '../../interface'
 
 export default function Product() {
   const { sku } = useParams()
@@ -14,15 +14,15 @@ export default function Product() {
 
   return (
     <div className="container">
-      <Link to=".." relative="path" className="">&larr; Back</Link>
+      <Link to=".." relative="path" className="">
+        &larr; Back
+      </Link>
       <div className="row">
         <div className="col-3">
           <img src={product.img[0]} alt="" />
         </div>
-        <div className="col-9">
-
-        </div>
-      l</div>
+        <div className="col-9"></div>l
+      </div>
     </div>
   )
 }

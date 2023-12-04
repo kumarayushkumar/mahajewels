@@ -1,18 +1,6 @@
-import { useEffect } from "react"
-import { NavLink, Outlet, Navigate } from "react-router-dom"
-
-import { auth, onAuthStateChanged } from "../../firebase/auth"
+import { NavLink, Outlet } from 'react-router-dom'
 
 export default function Admin() {
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, user => {
-      if (!user) {
-        return <Navigate to="/login" />
-      }
-    })
-    return () => unsubscribe()
-  }, [])
-
   return (
     <section id="admin">
       <Outlet />
